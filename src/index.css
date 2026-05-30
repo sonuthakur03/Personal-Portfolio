@@ -1,3 +1,39 @@
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Default Light Mode Tokens */
+  :root {
+    --background: #f8fafc; /* Clean light slate */
+    --foreground: #0d0d0d; /* Near black from palette */
+    --primary: #006680; /* High-contrast variant of React Blue */
+    --primary-foreground: #ffffff;
+    --secondary: #d4bf00; /* High-contrast variant of JS Yellow */
+    --secondary-foreground: #0d0d0d;
+    --tertiary: #e2e8f0; /* Soft gray for light cards */
+    --border: #cbd5e1;
+  }
+
+  /* Dark Mode Tokens (Using your exact palette colors) */
+  .dark {
+    --background: #0d0d0d; /* Main dark background */
+    --foreground: #ffffff; /* Light text */
+    --primary: #61dafb; /* Brilliant React Blue */
+    --primary-foreground: #0d0d0d;
+    --secondary: #f7df1e; /* Brilliant JS Yellow */
+    --secondary-foreground: #0d0d0d;
+    --tertiary: #222222; /* Dark Gray for cards */
+    --border: #333333; /* Muted border line */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}

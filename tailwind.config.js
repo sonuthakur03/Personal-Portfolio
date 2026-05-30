@@ -1,36 +1,23 @@
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class", // Enables toggle via adding 'dark' class to <html> or <body>
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        // Mapping your core palette
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         primary: {
-          DEFAULT: "#61DAFB", // React Blue
-          foreground: "#0D0D0D", // Dark text on light blue
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
         },
         secondary: {
-          DEFAULT: "#F7DF1E", // JS Yellow
-          foreground: "#0D0D0D",
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
         },
-        tertiary: {
-          DEFAULT: "#222222", // Dark Gray for cards/elevated surfaces
-          foreground: "#FFFFFF",
-        },
-        neutral: {
-          DEFAULT: "#0D0D0D", // Almost black for main background
-          foreground: "#FFFFFF",
-        },
-        // Muted tones for borders and subtle elements
-        muted: "#333333",
-      },
-      fontFamily: {
-        sans: ["Geist", "sans-serif"], // Sets Geist as the default
-        mono: ['"JetBrains Mono"', "monospace"], // Sets JetBrains for code/labels
-      },
-      borderRadius: {
-        DEFAULT: "0.5rem", // Standardized 8px radius matching the image
+        tertiary: "var(--tertiary)",
+        border: "var(--border)",
       },
     },
   },
