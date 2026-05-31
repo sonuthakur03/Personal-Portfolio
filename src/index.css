@@ -16,7 +16,7 @@
     --border: #cbd5e1;
   }
 
-  /* Dark Mode Tokens (Using your exact palette colors) */
+  /* Dark Mode Tokens (Using exact palette colors) */
   .dark {
     --background: #0d0d0d; /* Main dark background */
     --foreground: #ffffff; /* Light text */
